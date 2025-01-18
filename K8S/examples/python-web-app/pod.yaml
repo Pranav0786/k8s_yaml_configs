@@ -1,0 +1,11 @@
+# this is a comment
+# create a file pod.yaml and write down the below code.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-kubernetes-pod
+spec:
+  containers:
+  - name: ubuntu-latest-version
+    image: ubuntu:latest

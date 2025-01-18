@@ -53,6 +53,22 @@ spec:
         - containerPort: 80
 ```
 
+```yaml
+#Service Configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
 
+
+```
 
 
