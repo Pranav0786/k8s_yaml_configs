@@ -8,7 +8,7 @@ This document contains YAML snippets for Pods, Deployments, and Services. You ca
 2. Save it to a file with a `.yaml` extension, such as `resource-name.yaml`.
 3. Use the provided `kubectl` command to apply the configuration to your Kubernetes cluster.
 
-## Complete YAML Snippets
+## YAML Snippets
 
 ```yaml
 # Pod Configuration
@@ -25,9 +25,11 @@ spec:
     ports:
     - containerPort: 80
 
+---
 
-# Run this using 
+
 ```bash
+# Run this using 
 kubectl apply -f pod.yaml
 
 
