@@ -72,4 +72,48 @@ spec:
 
 ```
 
-======
+-----
+
+
+```yaml
+#Amazon-Books-Deploy Configuration
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amazon-books
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: amazon-books
+  template:
+    metadata:
+      labels:
+        app: amazon-books
+    spec:
+      containers:
+      - name: amazon-books-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+```
+
+------
+
+```yaml
+#Amazon-Books-Service Configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: amazon-books-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: amazon-books
+  ports:
+    - protocol: TCP
+      port: 80       # External port
+      targetPort: 80  # Port inside the Pod
+```
+
+------
