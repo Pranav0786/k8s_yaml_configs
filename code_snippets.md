@@ -15,9 +15,9 @@ This document contains YAML snippets for Pods, Deployments, and Services. You ca
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-pod
+  name: wlug-meta
   labels:
-    app: my-app
+    app: wlug-meta
 spec:
   containers:
   - name: my-container
