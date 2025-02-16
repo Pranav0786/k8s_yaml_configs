@@ -21,7 +21,7 @@ metadata:
 spec:
   containers:
   - name: my-container
-    image: nginx
+    image: ghcr.io/linuxserver/nginx
     ports:
     - containerPort: 80
 ```
@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
+        image: ghcr.io/linuxserver/nginx
         ports:
         - containerPort: 80
 ```
@@ -93,7 +93,7 @@ spec:
     spec:
       containers:
       - name: amazon-books-container
-        image: nginx:latest
+        image: ghcr.io/linuxserver/nginx
         ports:
         - containerPort: 80
 ```
